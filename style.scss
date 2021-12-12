@@ -1,0 +1,118 @@
+:root{
+    --azul-palido:hsl(225, 100%, 94%);
+    --azul-brillante:hsl(245, 75%, 52%);
+    --azul-muy-palido:hsl(225, 100%, 98%);
+    --azul-desaturado:hsl(224, 23%, 55%);
+    --azul-oscuro:hsl(223, 47%, 23%);
+    --fuente:'Red Hat Display', sans-serif;
+    --tam-parrafo:1.2rem;
+}
+html{
+    font-size: 62.5%;
+}
+*{
+    box-sizing: border-box;
+    font-family: var(--fuente);
+}
+body{
+    background-color: var(--azul-palido);
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size: 100vw;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+        .card{
+            width: 375px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 15px;
+            background-color: white;
+            &-body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px 81px;
+                h1{
+                    font-weight: 900;
+                }
+
+                p{
+                    text-align: center;
+                    margin: 0;
+                    font-size: var(--tam-parrafo);
+                    font-weight: 500;
+                }
+            }
+            &-buttons{
+                width: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                background-color: var(--azul-muy-palido);
+                border-radius: 10px;
+                margin-bottom: 20px;
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
+                a{
+                    color: var(--azul-brillante);
+                    font-weight: 500;
+                    
+                }
+                a:hover{
+                    text-decoration: none;
+                    color:var(--azul-desaturado);
+                    font-weight: 700;
+                }
+                h2{
+                    text-align: center;
+                }
+                h2 span{
+                    font-weight: 500;
+                    color: var(--azul-desaturado);
+                    font-size: 1.2rem;
+                    text-align: center;
+                }
+            }
+            button{
+                background-color: var(--azul-brillante);
+                width: 80%;
+                height: 40px;
+                color: white;
+                border: 1px solid var(--azul-oscuro);
+                border-radius: 10px;
+                font-weight: 700;
+                box-shadow: 0 10px 25px var(--azul-desaturado);
+                margin-bottom:25px;
+            }
+            button:hover{
+                opacity: 0.8;
+                cursor: pointer;
+            }
+            &-footer{
+                margin-bottom: 30px;
+                a{
+                    font-weight: 700;
+                    color: var(--azul-desaturado);
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                }
+                a:hover{
+                    color: var(--azul-oscuro);
+                }
+            }
+
+            
+        }
+}
